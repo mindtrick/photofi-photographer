@@ -1,0 +1,13 @@
+<ion-view view-title="Stats">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-refresh" menu-toggle="right" ng-if="refresh"
+                ng-click="refresh()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="row">
+            <div ng-controller="StatsCtrl" >
+                <div id="pieChart"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

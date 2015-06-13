@@ -1,0 +1,23 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Join event</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeAddModal()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div ng-controller="JoinEventCtrl">
+            <form ng-submit="joinExistEvent()">
+                <div class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Event id:</span>
+                        <input type="text" ng-model="eventData.uniqueId">
+                    </label>
+                    <label class="item">
+                        <button class="button button-block button-positive" type="submit">Add</button>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-modal-view>

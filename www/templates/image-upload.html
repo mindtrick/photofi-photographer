@@ -1,0 +1,26 @@
+<ion-view view-title="Gallery">
+    <ion-nav-buttons side="right">
+        <!--<button class="button button-icon button-clear ion-pie-graph" menu-toggle="right" ng-if="stats"-->
+                <!--ng-click="stats()"></button>-->
+    </ion-nav-buttons>
+    <ion-content id="gallery-content">
+        <!--<progress ng-if="maxValue" max="{{maxValue}}" value="{{currentValue}}"></progress>-->
+
+        <button class="button button-block button-balanced" ng-click="imagesFromCamera()">
+            טען תמונות מהמצלמה
+        </button>
+
+        <button class="button button-block button-energized" ng-click="imagesToServer()">
+            העלאת תמונות לשרת
+        </button>
+    <div class="row">
+        <div ng-if="maxValue" class="col-center pace pace-active">
+            <div class="pace-progress" data-progress="{{calc()}}" data-progress-text="{{calc()}}%"
+                 style="-webkit-transform: translate3d({{currentValue/maxValue*100}}%, 0px, 0px); -ms-transform: translate3d({{currentValue*100/maxValue}}%, 0px, 0px); transform: translate3d({{currentValue*100/maxValue}}%, 0px, 0px);">
+                <div class="pace-progress-inner"></div>
+            </div>
+            <div class="pace-activity"></div>
+        </div>
+    </div>
+    </ion-content>
+</ion-view>

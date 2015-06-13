@@ -1,0 +1,18 @@
+<ion-view view-title="App">
+    <ion-content>
+        <div class="center-content" id="not-login-container">
+        <div class="text-center ">
+            <img  ng-src="img/camera-icon.png" />
+        </div>
+        <div class="text-center">
+            <label class="letterpress">אתה לא מחובר כצלם <br /> לחץ על הכפתור על מנת להתחבר</label>
+        </div>
+        <div class="text-center">
+            <button class="button button-dark" ng-if="!localStorage.getItem('photographer')" ng-click="openLogin()">
+                התחבר
+            </button>
+        </div>
+        </div>
+
+    </ion-content>
+</ion-view>
