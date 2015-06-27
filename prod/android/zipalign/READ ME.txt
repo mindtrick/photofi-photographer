@@ -1,0 +1,37 @@
+zz_SIGN+ZIPALIGN
+
+You must have Java Development Kit installed, with the jarsigner tool. 
+You must also have a .keystore key which is working with jarsigner.
+
+Place your key.keystore in this folder, with the unsigned.apk
+
+Remember the JDK Path, as you will need this. It is usually C:/Program Files/Java/JDKx/bin (x referring to the version number)
+
+Run zz_SIGN+ZIPALIGN.bat, with administration rights. 
+
+Follow the on-screen instructions, and hopefully there are no errors.
+
+This is a very basic script, and it will carry on if there is an error (i,e, signing the app, will carry onto to zipalign, even if the signing failed.)
+So please exit the cmd, or carry on if you want.
+
+By Mattmanwrx @ xda
+
+www.mattman.org
+webmaster@mattman.org
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FOR zz_SIGN+ZIPALIGN_FOR_APP - To make the signing procedure more permanent.
+
+edit the zz_SIGN+ZIPALIGN_FOR_APP.bat script with a good text editor (I use Notepad++)
+
+replace all WRITE_PATH_TO_JARSIGNER with the path to the jarsigner. It is usually C:/Program Files/Java/JDKx/bin (x referring to the version number)
+
+replace all UNSIGNED_APP_NAME.apk with the unsigned app name (For me this would be unsignedBluFrost.apk)
+
+replace all KEYSTORE_NAME with the keystore name that you have created.
+
+replace the ALIAS_NAME with the alias_name used when creating your certificate.
+
+replace the APP_NAME with the desired name for the finished app. (For me this would be BluFrost.apk)
+

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.myapp451225" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>myApp</name>
+<widget id="com.photofi.photographer" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+  <name>Photofi Photographer</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Photofi photographer for upload events
     </description>
   <author email="hi@ionicframework" href="http://ionicframework.com/">
       Ionic Framework Team
     </author>
+	<gap:plugin name="com.ionic.keyboard"/>
+	<gap:plugin name="com.brodysoft.sqlitePlugin"/>
+	<gap:plugin name="nl.x-services.plugins.toast"/>
+	<gap:plugin name="org.apache.cordova.console"/>
+  <gap:plugin name="org.apache.cordova.device"/>
   <content src="index.html"/>
   <access origin="http://flashair/"/>
   <access origin="*"/>
@@ -17,4 +22,11 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  <icon src="resources\android\icon\drawable-xhdpi-icon.png"/>
+  <platform name="android">
+    <icon src="resources\android\icon\drawable-ldpi-icon.png" density="ldpi"/>
+    <icon src="resources\android\icon\drawable-mdpi-icon.png" density="mdpi"/>
+    <icon src="resources\android\icon\drawable-hdpi-icon.png" density="hdpi"/>
+    <icon src="resources\android\icon\drawable-xhdpi-icon.png" density="xhdpi"/>
+  </platform>
 </widget>

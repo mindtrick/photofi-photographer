@@ -1,4 +1,4 @@
-<ion-view view-title="Events">
+<ion-view view-title="Events" cache-view="false">
     <ion-nav-buttons side="right">
         <button class="button button-icon button-clear ion-plus-round" menu-toggle="right"
                 ng-click="eventOptions()"></button>
@@ -7,8 +7,17 @@
     </ion-nav-buttons>
     <ion-content>
 
+        <div class="row no-events" ng-model="eventCount" ng-if="events.length == 0">
+            <div class="col col-10"></div>
+            <div class="col col-center">
+                להכנסת אירוע חדש
+                לחץ על הפלוס
+            </div>
+            <div class="col col-10"></div>
+        </div>
+
+
         <ion-list>
-            <!--ui-sref="app.event({event: {{event.eventId}} })"-->
             <ion-item class="item-avatar" ng-repeat="event in events | orderBy:'uploadDate':true" ng-if="event.eventId"
                       href="#/event/{{event.eventId}}">
                     <img  ng-src="img/img{{$index%4}}.png"/>

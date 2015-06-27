@@ -1,7 +1,8 @@
 /**
  * Created by 758orenh on 1/15/2015.
  */
-var apiUrl = 'https://prod-photofi.rhcloud.com';
+//var apiUrl = 'https://prod-photofi.rhcloud.com';
+var apiUrl = 'http://api.photofi.co.il';
 //apiUrl = 'http://localhost:8080';
 angular.module('starter.apiServices', ['starter.dbServices'])
 
